@@ -86,3 +86,5 @@ end
 gem 'devise'
 
 gem 'gimei'
+
+gem 'active_hash'
