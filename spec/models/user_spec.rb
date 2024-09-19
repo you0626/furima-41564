@@ -6,6 +6,12 @@ RSpec.describe User, type: :model do
   end
 
   describe 'ユーザー新規登録' do
+    context '新規登録できる場合' do
+      it 'nickname、email、password、password_confirmation、rirst_name、last_name、first_name_katakana、last_name_katakana、birthが存在すれば登録できる' do
+        expect(@user).to be_valid
+      end
+    end
+
     it 'nicknameが空では登録できない' do
       @user.nickname = ''
       @user.valid?
@@ -31,55 +37,55 @@ RSpec.describe User, type: :model do
       expect(@user.errors.full_messages).to include("Password confirmation doesn't match Password")
     end
 
-    it 'First nameが空白の場合は無効であること' do
+    it 'first nameが空白の場合は無効であること' do
       @user.first_name = ''
       @user.valid?
       expect(@user.errors.full_messages).to include("First name can't be blank")
     end
 
-    it 'First nameが全角でない場合は無効であること' do
+    it 'first nameが全角でない場合は無効であること' do
       @user.first_name = 'abc'
       @user.valid?
       expect(@user.errors.full_messages).to include('First name is invalid. Input full-width characters')
     end
 
-    it 'Last nameが空白の場合は無効であること' do
+    it 'last nameが空白の場合は無効であること' do
       @user.last_name = ''
       @user.valid?
       expect(@user.errors.full_messages).to include("Last name can't be blank")
     end
 
-    it 'Last nameが全角でない場合は無効であること' do
+    it 'last nameが全角でない場合は無効であること' do
       @user.last_name = 'xyz'
       @user.valid?
       expect(@user.errors.full_messages).to include('Last name is invalid. Input full-width characters')
     end
 
-    it 'First name katakanaが空白の場合は無効であること' do
+    it 'first name katakanaが空白の場合は無効であること' do
       @user.first_name_katakana = ''
       @user.valid?
       expect(@user.errors.full_messages).to include("First name katakana can't be blank")
     end
 
-    it 'First name katakanaが全角カタカナでない場合は無効であること' do
+    it 'first name katakanaが全角カタカナでない場合は無効であること' do
       @user.first_name_katakana = 'あああ'
       @user.valid?
       expect(@user.errors.full_messages).to include('First name katakana is invalid. Input full-width katakana characters')
     end
 
-    it 'Last name katakanaが空白の場合は無効であること' do
+    it 'last name katakanaが空白の場合は無効であること' do
       @user.last_name_katakana = ''
       @user.valid?
       expect(@user.errors.full_messages).to include("Last name katakana can't be blank")
     end
 
-    it 'Last name katakanaが全角カタカナでない場合は無効であること' do
+    it 'last name katakanaが全角カタカナでない場合は無効であること' do
       @user.last_name_katakana = 'いろは'
       @user.valid?
       expect(@user.errors.full_messages).to include('Last name katakana is invalid. Input full-width katakana characters')
     end
 
-    it 'Birthが空白の場合は無効であること' do
+    it 'birthが空白の場合は無効であること' do
       @user.birth = ''
       @user.valid?
       expect(@user.errors.full_messages).to include("Birth can't be blank")
@@ -87,7 +93,6 @@ RSpec.describe User, type: :model do
 
     it '重複したemailが存在する場合は登録できない' do
       @user.save
-      expect(@user).to be_persisted
       another_user = FactoryBot.build(:user)
       another_user.email = @user.email
       another_user.valid?
