@@ -6,7 +6,6 @@ class User < ApplicationRecord
 
   with_options presence: true do
     validates :nickname, length: { maximum: 40 }
-    validates :email, uniqueness: true, format: { with: /\A[^@\s]+@[^@\s]+\z/ }
     validates :password,
               format: { with: /\A(?=.*?[a-z])(?=.*?\d)[a-z\d]+\z/i, message: 'is invalid. Include both letters and numbers' }
     validates :first_name, format: { with: /\A[ぁ-んァ-ヶ一-龥々ー]+\z/, message: 'is invalid. Input full-width characters' }
@@ -16,6 +15,6 @@ class User < ApplicationRecord
     validates :birth
   end
 
-  has_many :items
-  has_many :orders
+  # has_many :items
+  # has_many :orders
 end
