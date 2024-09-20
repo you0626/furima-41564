@@ -133,15 +133,15 @@
             <%= link_to item_path(item) do %>
               <div class='item-img-content'>
                 <%= image_tag "item-sample.png", class: "item-img" %>
-                <% if item.sold_out? %>
+                <%#%> if item.sold_out? %>
                   <div class='sold-out'>
                     <span>Sold Out!!</span>
                 </div>
-                <% end %>
+                <%#%> end %>
               </div>
               <div class='item-info'>
                 <h3 class='item-name'>
-                  <%= item.name %>
+                  <%= item.title %>
                 </h3>
                 <div class='item-price'>
                   <span><%= item.price %>円<br><%= item.spirit_id %></span>
