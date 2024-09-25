@@ -12,6 +12,12 @@ RSpec.describe OrderAddress, type: :model do
     context '商品が購入できない場合' do
       let(:order_address) { FactoryBot.build(:order_address) }
 
+      it 'tokenが空では登録できないこと' do
+        order_address = FactoryBot.build(:order_address, token: nil) # tokenをnilに設定
+        expect(order_address).to be_invalid
+        expect(order_address.errors[:token]).to include("can't be blank")
+      end
+
       it '郵便番号が空では購入できない' do
         order_address.postal_code = ''
         expect(order_address).to be_invalid
