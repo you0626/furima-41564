@@ -1,4 +1,4 @@
-<%= render "shared/second-header"%>
+<%= render "shared/second-header" %>
 
 <div class='transaction-contents'>
   <div class='transaction-main'>
@@ -33,7 +33,7 @@
 
     <%= include_gon %>
 
-    <%= form_with model: @order_address, url: item_orders_path(@item), id: 'charge-form', class: 'transaction-form-wrap',local: true do |f| %>
+    <%= form_with model: @order_address, url: item_orders_path(@item), id: 'charge-form', class: 'transaction-form-wrap', local: true do |f| %>
 
     <%= render 'shared/error_messages', model: f.object %>
 
@@ -49,10 +49,10 @@
         </div>
         <div id="number-form" class="input-default"></div>
         <div class='available-card'>
-          <%= image_tag 'card-visa.gif', class: 'card-logo'%>
-          <%= image_tag 'card-mastercard.gif', class: 'card-logo'%>
-          <%= image_tag 'card-jcb.gif', class: 'card-logo'%>
-          <%= image_tag 'card-amex.gif', class: 'card-logo'%>
+          <%= image_tag 'card-visa.gif', class: 'card-logo' %>
+          <%= image_tag 'card-mastercard.gif', class: 'card-logo' %>
+          <%= image_tag 'card-jcb.gif', class: 'card-logo' %>
+          <%= image_tag 'card-amex.gif', class: 'card-logo' %>
         </div>
       </div>
       <div class="form-group">

@@ -55,4 +55,11 @@ class ItemsController < ApplicationController
 
     redirect_to root_path
   end
+
+  def move_to_index_if_sold
+    @item = Item.find(params[:id])
+    return unless @item.sold_out?
+
+    redirect_to root_path
+  end
 end
