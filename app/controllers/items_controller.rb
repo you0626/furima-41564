@@ -6,6 +6,8 @@ class ItemsController < ApplicationController
 
   def index
     @items = Item.order('created_at DESC')
+    @items = @items.where(category_id: params[:category_id]) if params[:category_id].present?
+    @items = @items.where(brand_id: params[:brand_id]) if params[:brand_id].present?
   end
 
   def new
@@ -40,6 +42,15 @@ class ItemsController < ApplicationController
   def destroy
     @item.destroy
     redirect_to items_url, notice: 'Item was successfully destroyed.'
+  end
+
+  def search
+    keyword = params[:keyword]
+    @items = if keyword.present?
+               Item.where('title LIKE ?', "%#{keyword}%")
+             else
+               Item.none
+             end
   end
 
   private
