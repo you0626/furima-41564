@@ -1,6 +1,6 @@
 class OrdersController < ApplicationController
-  before_action :authenticate_user!
   before_action :set_item, only: [:index, :create]
+  before_action :authenticate_user!
   before_action :move_to_root_if_sold
   before_action :move_to_root_if_seller
 
@@ -11,15 +11,16 @@ class OrdersController < ApplicationController
 
   def create
     @order_address = OrderAddress.new(order_address_params)
-    order = Order.new(user_id: current_user.id, item_id: params[:item_id])
-    if @order_address.valid?
+
+    if @item.sold_out?
+      redirect_to root_path, alert: 'This item is already sold out.'
+    elsif @order_address.valid?
       pay_item
       @order_address.save
-      @item.update(sold_out: true)
       redirect_to root_path, notice: 'Order was successfully created.'
     else
       gon.public_key = ENV['PAYJP_PUBLIC_KEY']
-      render :index, status: :unprocessable_entity
+      render :new
     end
   end
 
