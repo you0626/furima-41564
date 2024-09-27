@@ -24,5 +24,4 @@ class Item < ApplicationRecord
   belongs_to :spirit
   belongs_to :prefecture
   belongs_to :day
-  belongs_to :brand
 end

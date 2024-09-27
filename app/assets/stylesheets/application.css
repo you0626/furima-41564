@@ -16,19 +16,3 @@
  * {
   box-sizing: border-box;
 }
-
-.dropdown {
-  position: absolute;
-  background-color: white;
-  border: 1px solid #ccc;
-  z-index: 1000;
-}
-
-.dropdown li {
-  list-style: none;
-  padding: 8px;
-}
-
-.dropdown li:hover {
-  background-color: #f0f0f0;
-}
