@@ -7,8 +7,6 @@ FactoryBot.define do
     house_number { '1-1' }
     building_name { 'テストマンション' }
     telephone_number { '09012345678' }
-    user_id { 1 }
-    item_id { 1 }
 
     trait :invalid do
       postal_code { '' }
