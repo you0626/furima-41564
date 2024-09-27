@@ -1,6 +1,8 @@
 class OrdersController < ApplicationController
+  before_action :authenticate_user!
   before_action :set_item, only: [:index, :create]
-  before_action :authenticate_user!, only: [:create]
+  before_action :move_to_root_if_sold
+  before_action :move_to_root_if_seller
 
   def index
     gon.public_key = ENV['PAYJP_PUBLIC_KEY']
@@ -8,7 +10,7 @@ class OrdersController < ApplicationController
   end
 
   def create
-    @order_address = OrderAddress.new(order_address_params.merge(user_id: current_user.id, item_id: params[:item_id]))
+    @order_address = OrderAddress.new(order_address_params)
     order = Order.new(user_id: current_user.id, item_id: params[:item_id])
     if @order_address.valid?
       pay_item
@@ -25,7 +27,7 @@ class OrdersController < ApplicationController
 
   def order_address_params
     params.require(:order_address).permit(:postal_code, :prefecture_id, :municipality, :house_number, :building_name,
-                                          :telephone_number, :user_id, :item_id, :token).merge(token: params[:token])
+                                          :telephone_number, :user_id, :item_id, :token).merge(user_id: current_user.id, item_id: params[:item_id], token: params[:token])
   end
 
   def set_item
@@ -39,5 +41,17 @@ class OrdersController < ApplicationController
       card: @order_address.token,
       currency: 'jpy'
     )
+  end
+
+  def move_to_root_if_sold
+    return unless @item.sold_out?
+
+    redirect_to root_path
+  end
+
+  def move_to_root_if_seller
+    return unless @item.user == current_user
+
+    redirect_to root_path
   end
 end
