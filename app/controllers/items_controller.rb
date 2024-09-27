@@ -1,7 +1,8 @@
 class ItemsController < ApplicationController
-  before_action :authenticate_user!, only: [:new, :create, :edit, :update, :destroy]
   before_action :set_item, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!, only: [:new, :create, :edit, :update, :destroy]
   before_action :ensure_item_owner, only: [:edit, :update, :destroy]
+  before_action :move_to_index_if_sold, only: [:edit, :update, :destroy]
 
   def index
     @items = Item.order('created_at DESC')
@@ -21,6 +22,8 @@ class ItemsController < ApplicationController
   end
 
   def show
+    @previous_item = Item.where('id < ?', @item.id).order(id: :desc).first
+    @next_item = Item.where('id > ?', @item.id).order(id: :asc).first
   end
 
   def edit
@@ -52,6 +55,12 @@ class ItemsController < ApplicationController
 
   def ensure_item_owner
     return if @item.user == current_user
+
+    redirect_to root_path
+  end
+
+  def move_to_index_if_sold
+    return unless @item.sold_out?
 
     redirect_to root_path
   end
