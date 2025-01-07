@@ -10,4 +10,5 @@ Rails.application.routes.draw do
       resources :addresses, only: [:create]
     end
   end
+  get 'about', to: 'users#about'
 end

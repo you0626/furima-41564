@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <%= stylesheet_link_tag 'user/about', media: 'all' %>
+    <title>会社概要 | 株式会社フリマ</title>
+</head>
+<body>
+
+    <!-- ヘッダー -->
+    <header class="items-sell-header">
+    <%= link_to image_tag('furima-logo-color.png' , size: '185x50'), "/" %>
+  </header>
+
+    <div class="container">
+        <h1>会社概要</h1>
+        <table>
+            <tr>
+                <th>項目</th>
+                <th>内容</th>
+            </tr>
+            <tr>
+                <td>会社名</td>
+                <td>株式会社フリマ</td>
+            </tr>
+            <tr>
+                <td>設立</td>
+                <td>2020年6月</td>
+            </tr>
+            <tr>
+                <td>資本金</td>
+                <td>1,000万円</td>
+            </tr>
+            <tr>
+                <td>代表者</td>
+                <td>代表取締役社長 山田 太郎</td>
+            </tr>
+            <tr>
+                <td>所在地</td>
+                <td>東京都渋谷区神南1丁目23-5 フリマビル5F</td>
+            </tr>
+            <tr>
+                <td>事業内容</td>
+                <td>
+                    - フリマアプリの開発・運営<br>
+                    - 中古品売買のプラットフォーム提供<br>
+                    - ユーザーサポート・マーケティング
+                </td>
+            </tr>
+            <tr>
+                <td>従業員数</td>
+                <td>50名（2024年12月現在）</td>
+            </tr>
+            <tr>
+                <td>主要取引先</td>
+                <td>
+                    - 株式会社〇〇〇〇<br>
+                    - 株式会社△△△△
+                </td>
+            </tr>
+            <tr>
+                <td>取引銀行</td>
+                <td>
+                    - みずほ銀行 渋谷支店<br>
+                    - 三井住友銀行 新宿支店
+                </td>
+            </tr>
+            <tr>
+                <td>連絡先</td>
+                <td>
+                    TEL: 03-1234-5678<br>
+                    E-mail: <a href="mailto:info@furima.co.jp" class="footer-link">info@furima.co.jp</a>
+                </td>
+            </tr>
+            <tr>
+                <td>URL</td>
+                <td><a href="https://www.furima.co.jp" class="footer-link">https://www.furima.co.jp</a></td>
+            </tr>
+        </table>
+    </div>
+
+    <!-- フッター -->
+    <footer class="items-sell-footer">
+    <ul class="menu">
+      <li><a href="#">プライバシーポリシー</a></li>
+      <li><a href="#">フリマ利用規約</a></li>
+      <li><a href="#">特定商取引に関する表記</a></li>
+    </ul>
+    <%= link_to image_tag('furima-logo-color.png' , size: '185x50'), "/" %>
+    <p class="inc">
+      ©︎Furima,Inc.
+    </p>
+  </footer>
+
+</body>
+</html>

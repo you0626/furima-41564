@@ -1,0 +1,89 @@
+/* app/assets/stylesheets/user/about.css */
+
+/* 全体のスタイル */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  text-align: center;
+  color: #333;
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+}
+
+table, th, td {
+  border: 1px solid #ddd;
+}
+
+th, td {
+  padding: 10px;
+  text-align: left;
+}
+
+th {
+  background-color: #f4f4f4;
+}
+
+.footer-link {
+  color: #007BFF;
+  text-decoration: none;
+}
+
+.footer-link:hover {
+  text-decoration: underline;
+}
+
+/* ヘッダーのスタイル */
+header.items-sell-header {
+  color: white;
+  padding: 10px 0;
+  text-align: center;
+}
+
+/* フッターのスタイル */
+footer.items-sell-footer {
+  color: #333;
+  text-align: center;
+  padding: 10px 0;
+  margin-top: 20px;
+  width: 100%; /* 親要素の幅を指定 */
+}
+
+footer ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex; /* フレックスボックスを使用 */
+  justify-content: center; /* 横中央に配置 */
+  width: 100%; /* 親要素に対してフル幅を使う */
+  box-sizing: border-box; /* 幅の計算にpaddingを含める */
+}
+
+footer ul li {
+  margin: 0 10px;
+}
+
+footer .inc {
+  font-size: 12px;
+  color: #aaa;
+  margin-top: 10px; /* incの文字がフッターのリンクから少し離れる */
+}
