@@ -11,4 +11,5 @@ Rails.application.routes.draw do
     end
   end
   get 'users/about', to: 'users#about'
+  get 'users/privacy_policy', to: 'users#privacy_policy', as: 'users_privacy_policy'
 end
