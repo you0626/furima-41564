@@ -1,52 +1,35 @@
-<!DOCTYPE html>
-<html lang="ja">
+<%= render "shared/second-header" %>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <%= stylesheet_link_tag 'user/about', media: 'all' %>
+    <%= stylesheet_link_tag 'user/privacy_policy', media: 'all' %>
     <title>プライバシーポリシー</title>
 </head>
 <body>
 
-<!-- ヘッダー -->
-<header class="items-sell-header">
-    <%= link_to image_tag('furima-logo-color.png' , size: '185x50'), "/" %>
-</header>
 
-<div class="container">
+<div class="privacy-container">
 
-    <h1>プライバシーポリシー</h1>
+    <h1 class="privacy-title">プライバシーポリシー</h1>
 
-    <h2>プライバシーポリシーの内容</h2>
+    <h2 class="privacy-section-title">プライバシーポリシーの内容</h2>
 
-    <h3>収集する情報</h3>
-    <p>ユーザーが提供する情報として、名前、メールアドレス、電話番号、その他の個人情報を収集します。</p>
+    <h3 class="privacy-subheading">収集する情報</h3>
+    <p class="privacy-text">ユーザーが提供する情報として、名前、メールアドレス、電話番号、その他の個人情報を収集します。</p>
 
-    <h3>情報の使用方法</h3>
-    <p>ユーザーの個人情報は、サービス提供のために使用されます。例えば、サービスの改善、新しい機能の通知などに使用されます。</p>
+    <h3 class="privacy-subheading">情報の使用方法</h3>
+    <p class="privacy-text">ユーザーの個人情報は、サービス提供のために使用されます。例えば、サービスの改善、新しい機能の通知などに使用されます。</p>
 
-    <h3>情報の保護</h3>
-    <p>当社は、個人情報を保護するために適切なセキュリティ対策を講じます。</p>
+    <h3 class="privacy-subheading">情報の保護</h3>
+    <p class="privacy-text">当社は、個人情報を保護するために適切なセキュリティ対策を講じます。</p>
 
-    <h3>第三者への提供</h3>
-    <p>ユーザーの個人情報は、事前に同意を得た場合を除き、第三者には提供されません。</p>
+    <h3 class="privacy-subheading">第三者への提供</h3>
+    <p class="privacy-text">ユーザーの個人情報は、事前に同意を得た場合を除き、第三者には提供されません。</p>
 
-    <h3>お問い合わせ</h3>
-    <p>プライバシーポリシーに関してご質問がある場合は、<a href="mailto:info@furima.co.jp">info@furima.co.jp</a>までお問い合わせください。</p>
-  </div>
+    <h3 class="privacy-subheading">お問い合わせ</h3>
+    <p class="privacy-text">プライバシーポリシーに関してご質問がある場合は、<a href="mailto:info@furima.co.jp" class="privacy-link">info@furima.co.jp</a>までお問い合わせください。</p>
+</div>
 
-<!-- フッター -->
-<footer class="items-sell-footer">
-    <ul class="menu">
-      <li><%= link_to 'プライバシーポリシー', users_privacy_policy_path, class: "footer-link" %></li>
-      <li><a href="#">フリマ利用規約</a></li>
-      <li><a href="#">特定商取引に関する表記</a></li>
-    </ul>
-    <%= link_to image_tag('furima-logo-color.png' , size: '185x50'), "/" %>
-    <p class="inc">
-      ©︎Furima,Inc.
-    </p>
-</footer>
 
 </body>
-</html>
+<%= render "shared/second-footer" %>

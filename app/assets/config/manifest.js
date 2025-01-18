@@ -4,3 +4,6 @@
 //= link_tree ../../../vendor/javascript .js
 //= link application.css
 //= link user/about.css
+//= link user/privacy_policy.css
+//= link user/service.css
+//= link user/point.css

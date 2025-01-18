@@ -1,0 +1,52 @@
+/* 全体のコンテナ */
+.service-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+}
+
+/* 見出し */
+.service-title {
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.service-heading {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #555;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+/* テキスト */
+.service-intro, .service-text {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 15px;
+}
+
+/* リスト */
+.service-list, .service-ul {
+  margin-left: 20px;
+  padding-left: 20px;
+}
+
+.service-list li, .service-ul li {
+  margin-bottom: 10px;
+  color: #444;
+}
+
+/* 入れ子リスト */
+.service-list ol {
+  margin-left: 20px;
+  padding-left: 20px;
+}

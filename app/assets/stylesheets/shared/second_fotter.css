@@ -5,6 +5,8 @@
   background-color: #f5f5f5;
   display: flex;
   flex-direction: column;
+  justify-content: center; /* 中央揃えのため追加 */
+  align-items: center; /* 水平方向に中央揃え */
 }
 
 .second-fotter-text-wrap {
@@ -22,5 +24,5 @@
 .second-fotter-logo {
   width: 185px;
   height: 49px;
-  margin: 0 auto;
+  margin: 20px 0; /* ロゴの上下に余白を追加 */
 }
