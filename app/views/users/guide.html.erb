@@ -1,0 +1,106 @@
+<%= render "shared/second-header" %>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FURIMAアプリガイド</title>
+    <%= stylesheet_link_tag 'user/guide', media: 'all' %>
+</head>
+<body>
+
+    <!-- メインコンテンツ -->
+    <div class="guide-container">
+        <h1>FURIMA アプリガイド</h1>
+        
+        <!-- 会員登録の説明 -->
+        <section class="guide-section">
+            <h2>会員登録方法</h2>
+            <p>FURIMAを利用するには会員登録が必要です。以下の手順で登録を行いましょう。</p>
+            <ol>
+                <li><strong>１・アプリを起動</strong>し、「新規会員登録」ボタンをタップします。</li>
+                <li><strong>２・必要情報を入力</strong>します。名前、メールアドレス、電話番号、パスワードなどを入力します。</li>
+                <li><strong>３・メール認証</strong>：登録したメールアドレスに届く認証メールを確認し、認証リンクをクリックします。</li>
+                <li><strong>４・登録完了</strong>：認証が完了すると、会員登録が完了します。</li>
+            </ol>
+        </section>
+        
+        <!-- ログイン方法の説明 -->
+        <section class="guide-section">
+            <h2>ログイン方法</h2>
+            <p>会員登録後、ログインしてFURIMAを利用できます。</p>
+            <ol>
+                <li><strong>１・アプリを起動</strong>し、「ログイン」ボタンをタップします。</li>
+                <li><strong>２・登録したメールアドレスとパスワードを入力</strong>し、ログインします。</li>
+                <li><strong>３・ログイン成功</strong>：正しく情報を入力すると、FURIMAのホーム画面に移動します。</li>
+            </ol>
+        </section>
+        
+        <!-- 出品方法 -->
+        <section class="guide-section">
+            <h2>商品を出品する方法</h2>
+            <ol>
+                <li><strong>１・アプリにログイン</strong>して、画面下部の「出品」ボタンをタップします。</li>
+                <li><strong>２・商品情報を入力</strong>します。商品名、説明文、価格、カテゴリ、商品写真などを入力してください。</li>
+                <li><strong>３・出品する</strong>をタップして、商品の出品が完了です。</li>
+            </ol>
+        </section>
+        
+        <!-- 購入方法 -->
+        <section class="guide-section">
+            <h2>商品を購入する方法</h2>
+            <ol>
+                <li><strong>１・購入したい商品を探す</strong>ために、商品ページで商品を選択してください。</li>
+                <li>２・商品の詳細ページで、<strong>価格や商品の状態</strong>を確認します。</li>
+                <li><strong>３・購入ボタン</strong>をタップして、支払い方法を選択します。</li>
+                <li>４・注文確定後、商品が配送されます。</li>
+            </ol>
+        </section>
+
+        <!-- 支払い方法 -->
+        <section class="guide-section">
+            <h2>支払い方法</h2>
+            <p>FURIMAでは以下の支払い方法をサポートしています：</p>
+            <ul>
+                <li>・クレジットカード</li>
+                <li>・デビットカード</li>
+                <li>・ポイントでの支払い</li>
+                <li>・売上金</li>
+            </ul>
+        </section>
+
+        <!-- 取引完了後の流れ -->
+        <section class="guide-section">
+            <h2>取引完了後の流れ</h2>
+            <p>購入後、出品者から商品が発送され、購入者が商品を受け取ったら取引が完了となります。その後、評価を行い、取引が終了します。</p>
+        </section>
+
+        <!-- FURIMAの特徴 -->
+        <section class="guide-section">
+            <h2>FURIMAの特徴</h2>
+            <ul>
+                <li><strong>・簡単に売り買いできる</strong>：スマホひとつで、いつでもどこでも簡単に出品・購入が可能！</li>
+                <li><strong>・売上金の即日振込み</strong>：午前9時までの依頼で、翌日には指定の口座に入金されます。</li>
+                <li><strong>・多様な支払い方法</strong>：クレジットカード、ポイント、売上金など、様々な方法でお支払い可能です。</li>
+            </ul>
+        </section>
+
+        <!-- よくある質問（FAQ） -->
+        <section class="guide-section">
+            <h2>よくある質問（FAQ）</h2>
+            <ul>
+                <li><strong>Q1:</strong> 取引中にトラブルが発生した場合、どうすればいいですか？<br> <strong>→ A1:</strong> サポートセンターまでお問い合わせいただければ、問題を解決します。</li>
+                <li><strong>Q2:</strong> 支払い方法に制限はありますか？<br> <strong>→ A2:</strong> 現在、クレジットカード、デビットカード、ポイント、売上金をサポートしています。</li>
+                <li><strong>Q3:</strong> 商品を出品する際に注意する点はありますか？<br> <strong>→ A3:</strong> 商品説明を詳しく記載し、正確な情報を入力してください。誤った情報がある場合、削除されることがあります。</li>
+            </ul>
+        </section>
+
+        <!-- サポートとお問い合わせ -->
+        <section class="guide-section">
+            <h2>サポートとお問い合わせ</h2>
+            <p>何か問題が発生した場合、または質問がある場合は、サポートチームまでお問い合わせください。</p>
+            <p>お問い合わせ先: <a href="mailto:support@furima.co.jp">support@furima.co.jp</a></p>
+        </section>
+
+    </div>
+
+</body>
+<%= render "shared/second-footer" %>

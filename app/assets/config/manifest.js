@@ -7,3 +7,4 @@
 //= link user/privacy_policy.css
 //= link user/service.css
 //= link user/point.css
+//= link user/guide.css

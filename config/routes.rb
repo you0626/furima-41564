@@ -14,4 +14,6 @@ Rails.application.routes.draw do
   get 'users/privacy_policy', to: 'users#privacy_policy'
   get 'users/service', to: 'users#service'
   get 'users/point', to: 'users#point'
+  get 'users/guide', to: 'users#guide'
+
 end

@@ -14,4 +14,8 @@ class UsersController < ApplicationController
   def point
     @users = User.all
   end
+
+  def guide
+    @users = User.all
+  end
 end
