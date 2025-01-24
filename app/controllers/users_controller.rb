@@ -18,4 +18,8 @@ class UsersController < ApplicationController
   def guide
     @users = User.all
   end
+
+  def logo_guidelines
+    @users = User.all
+  end
 end

@@ -15,5 +15,6 @@ Rails.application.routes.draw do
   get 'users/service', to: 'users#service'
   get 'users/point', to: 'users#point'
   get 'users/guide', to: 'users#guide'
+  get 'users/logo_guidelines', to: 'users#logo_guidelines'
 
 end

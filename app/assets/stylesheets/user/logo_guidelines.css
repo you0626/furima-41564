@@ -1,0 +1,73 @@
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #f9f9f9;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+.logo-guidelines-container {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 20px;
+  background: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+.logo-guidelines-title {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 20px;
+  color: #2c3e50;
+}
+
+.logo-guidelines-section {
+  margin-bottom: 30px;
+}
+
+.logo-guidelines-section-title {
+  font-size: 1.5rem;
+  color: #34495e;
+  border-bottom: 2px solid #3498db;
+  padding-bottom: 5px;
+  margin-bottom: 15px;
+}
+
+.logo-guidelines-text {
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+
+.logo-guidelines-list {
+  margin-left: 20px;
+}
+
+.logo-guidelines-list li {
+  list-style: disc;
+  margin-bottom: 5px;
+}
+
+.logo-guidelines-download-link {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px 20px;
+  background: #3498db;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 4px;
+}
+
+.logo-guidelines-download-link:hover {
+  background: #2980b9;
+}
+
+.logo-guidelines-link {
+  color: #3498db;
+  text-decoration: underline;
+}
+
+.logo-guidelines-link:hover {
+  color: #2980b9;
+}

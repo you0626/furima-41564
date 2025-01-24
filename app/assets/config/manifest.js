@@ -8,3 +8,4 @@
 //= link user/service.css
 //= link user/point.css
 //= link user/guide.css
+//= link user/logo_guidelines.css

@@ -1,0 +1,56 @@
+<%= render "shared/second-header" %>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <%= stylesheet_link_tag 'user/logo_guidelines', media: 'all' %>
+    <title>FURIMAロゴ利用ガイドライン</title>
+</head>
+<body>
+
+ <div class="logo-guidelines-container">
+    <h1 class="logo-guidelines-title">FURIMAロゴ利用ガイドライン</h1>
+
+    <!-- セクション: 基本情報 -->
+    <section class="logo-guidelines-section">
+      <h2 class="logo-guidelines-section-title">基本情報</h2>
+      <p class="logo-guidelines-text">FURIMAロゴは、弊社のブランドを象徴する重要な資産です。ロゴの使用に際しては、以下のガイドラインを遵守してください。</p>
+    </section>
+
+    <!-- セクション: 使用許可範囲 -->
+    <section class="logo-guidelines-section">
+      <h2 class="logo-guidelines-section-title">使用許可範囲</h2>
+      <ul class="logo-guidelines-list">
+        <li>広告やマーケティング素材における使用</li>
+        <li>イベントやプロモーションにおける使用</li>
+        <li>公式パートナーによる使用</li>
+      </ul>
+      <p class="logo-guidelines-text">※上記以外の用途で使用する場合、事前に弊社の承認が必要です。</p>
+    </section>
+
+    <!-- セクション: 使用上の注意 -->
+    <section class="logo-guidelines-section">
+      <h2 class="logo-guidelines-section-title">使用上の注意</h2>
+      <ul class="logo-guidelines-list">
+        <li>ロゴの改変、色の変更、形状の変更は禁止です。</li>
+        <li>ロゴの背景は十分な余白を確保してください。</li>
+        <li>第三者を誤解させる用途での使用は厳禁です。</li>
+      </ul>
+    </section>
+
+    <!-- セクション: ダウンロード -->
+    <section class="logo-guidelines-section">
+      <h2 class="logo-guidelines-section-title">ロゴデータのダウンロード</h2>
+      <p class="logo-guidelines-text">以下のリンクから公式ロゴデータをダウンロードいただけます。</p>
+      <a href="<%= asset_path('furima-logo-color.png') %>" download="furima-logo-color.png" class="logo-guidelines-download-link">ロゴデータをダウンロード</a>
+    </section>
+
+    <!-- セクション: 問い合わせ -->
+    <section class="logo-guidelines-section">
+      <h2 class="logo-guidelines-section-title">お問い合わせ</h2>
+      <p class="logo-guidelines-text">ロゴ利用に関する質問がございましたら、<a href="mailto:info@furima.co.jp" class="logo-guidelines-link">info@furima.co.jp</a> までお問い合わせください。</p>
+    </section>
+  </div>
+
+
+</body>
+<%= render "shared/second-footer" %>
