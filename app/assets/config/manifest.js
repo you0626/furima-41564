@@ -9,3 +9,4 @@
 //= link user/point.css
 //= link user/guide.css
 //= link user/logo_guidelines.css
+//= link user/notifications.css

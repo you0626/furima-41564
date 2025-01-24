@@ -1,0 +1,83 @@
+<%= render "shared/second-header" %>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <%= stylesheet_link_tag 'user/notifications', media: 'all' %>
+    <title>お知らせ</title>
+</head>
+<body>
+
+<div class="notifications-container">
+  <h1 class="notifications-title">お知らせ</h1>
+
+  <ul class="notifications-list">
+    <!-- お知らせ1 -->
+    <li class="notification-item">
+      <h2 class="notification-title">新機能「簡単出品」リリースのお知らせ</h2>
+      <p class="notification-date">2025年1月20日</p>
+      <p class="notification-content">
+        FURI MAをご利用いただきありがとうございます。新機能「簡単出品」がリリースされました。
+        写真を撮るだけで商品の詳細を自動入力するAI機能をぜひお試しください。
+      </p>
+    </li>
+
+    <!-- お知らせ2 -->
+    <li class="notification-item">
+      <h2 class="notification-title">メンテナンスのお知らせ</h2>
+      <p class="notification-date">2025年1月15日</p>
+      <p class="notification-content">
+        いつもFURI MAをご利用いただきありがとうございます。以下の日程でシステムメンテナンスを実施いたします。<br>
+        日時：2025年1月25日（土）午前1時～午前5時<br>
+        メンテナンス中はサービスをご利用いただけません。ご迷惑をおかけいたしますが、ご理解のほどよろしくお願いいたします。
+      </p>
+    </li>
+
+    <!-- お知らせ3 -->
+    <li class="notification-item">
+      <h2 class="notification-title">配送サービスの料金改定について</h2>
+      <p class="notification-date">2025年1月10日</p>
+      <p class="notification-content">
+        配送パートナーとの契約変更に伴い、2025年2月1日より配送料金が一部改定されます。詳細は
+        <a href="/shipping-info" class="notification-link">こちら</a>をご確認ください。
+      </p>
+    </li>
+
+    <!-- お知らせ4 -->
+    <li class="notification-item">
+      <h2 class="notification-title">【キャンペーン】出品手数料無料キャンペーン開始！</h2>
+      <p class="notification-date">2025年1月5日</p>
+      <p class="notification-content">
+        期間限定で出品手数料が無料になるキャンペーンを実施中です！<br>
+        キャンペーン期間：2025年1月10日～2025年1月31日<br>
+        今すぐ出品して、売上を最大化しましょう！
+      </p>
+    </li>
+
+    <!-- お知らせ5 -->
+    <li class="notification-item">
+      <h2 class="notification-title">アカウントのセキュリティ強化について</h2>
+      <p class="notification-date">2024年12月30日</p>
+      <p class="notification-content">
+        最近、フィッシング詐欺や不正アクセスの報告が増えています。<br>
+        皆さまのアカウントを安全に保つため、以下を徹底してください：<br>
+        - 定期的にパスワードを変更する<br>
+        - 他のサイトと同じパスワードを使用しない<br>
+        詳細は<a href="/security-tips" class="notification-link">セキュリティ対策ガイド</a>をご覧ください。
+      </p>
+    </li>
+
+    <!-- お知らせ6 -->
+    <li class="notification-item">
+      <h2 class="notification-title">「お気に入り」機能追加のお知らせ</h2>
+      <p class="notification-date">2024年12月20日</p>
+      <p class="notification-content">
+        新たに「お気に入り」機能が追加されました！<br>
+        気になる商品をお気に入り登録して、後で簡単に確認できます。<br>
+        商品ページの「ハート」ボタンをクリックしてご利用ください。
+      </p>
+    </li>
+  </ul>
+</div>
+
+</body>
+<%= render "shared/second-footer" %>

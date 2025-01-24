@@ -1,0 +1,64 @@
+/* お知らせコンテナ */
+.notifications-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+/* タイトル */
+.notifications-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #333;
+}
+
+/* お知らせリスト */
+.notifications-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* 各お知らせ */
+.notification-item {
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #ddd;
+}
+
+/* お知らせタイトル */
+.notification-title {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #555;
+}
+
+/* 日付 */
+.notification-date {
+  font-size: 14px;
+  color: #888;
+  margin-bottom: 10px;
+}
+
+/* 内容 */
+.notification-content {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #333;
+}
+
+/* リンク */
+.notification-link {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.notification-link:hover {
+  text-decoration: underline;
+}

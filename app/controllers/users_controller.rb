@@ -22,4 +22,8 @@ class UsersController < ApplicationController
   def logo_guidelines
     @users = User.all
   end
+
+  def notifications
+    @users = User.all
+  end
 end
