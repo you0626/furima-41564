@@ -26,4 +26,8 @@ class UsersController < ApplicationController
   def notifications
     @users = User.all
   end
+
+  def tokushoho
+    @users = User.all
+  end
 end

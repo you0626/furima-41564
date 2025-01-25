@@ -10,3 +10,5 @@
 //= link user/guide.css
 //= link user/logo_guidelines.css
 //= link user/notifications.css
+//= link user/tokushoho.css
+

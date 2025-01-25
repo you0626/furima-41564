@@ -17,5 +17,6 @@ Rails.application.routes.draw do
   get 'users/guide', to: 'users#guide'
   get 'users/logo_guidelines', to: 'users#logo_guidelines'
   get 'users/notifications', to: 'users#notifications'
+  get 'users/tokushoho', to: 'users#tokushoho'
 
 end
